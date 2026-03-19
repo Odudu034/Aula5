@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class ex4 {
+    public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+ 
+        System.out.print("Digite o plano (A, B ou C): ");
+        String plano = e.nextLine().toUpperCase();
+ 
+        System.out.print("Digite o salário atual: ");
+        double salario = e.nextDouble();
+ 
+        double novoSalario;
+ 
+        switch (plano) {
+            case "A":
+                novoSalario = salario + (salario * 0.10);
+                break;
+            case "B":
+                novoSalario = salario + (salario * 0.15);
+                break;
+            case "C":
+                novoSalario = salario + (salario * 0.20);
+                break;
+            default:
+                System.out.println("Plano inválido");
+                return;
+        }
+ 
+        System.out.println("Novo salário: R$ " + novoSalario);
+ 
+    }
+}
